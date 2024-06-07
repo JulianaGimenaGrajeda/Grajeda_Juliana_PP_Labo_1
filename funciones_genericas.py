@@ -224,3 +224,100 @@ def calcular_promedio(lista:list,clave:str):
 llevarse a cabo, a ocurrido un error.. "
 
     return resultado
+
+#MENUS OPCIONALES
+def cargar_menu():
+    '''
+    Muestra un menú de opciones al usuario y espera a 
+    que el usuario ingrese una opción.
+
+    Retorna:
+    str: La opción ingresada por el usuario.
+    '''
+
+    menu = input('''\nMenú de Opciones:
+    
+\n''')
+
+    return menu
+
+#VALIDAR OPCIONES STR
+def validar_str(caracter: str):
+    '''
+    Valida si un carácter o una cadena de
+    caracteres contiene solo letras del alfabeto.
+    Parámetros:
+    caracter (str): El carácter o cadena de 
+    caracteres a validar.
+    Retorna:
+    bool: True si el carácter o cadena de caracteres 
+    contiene solo letras, False en caso contrario.
+    '''
+    
+    flag = False
+
+    if caracter.isalpha():
+        flag = True
+
+    return flag
+
+def validar_opciones():
+    '''
+    Muestra un menú de opciones al usuario y 
+    valida que la opción ingresada sea una letra.
+
+    Retorna:
+    str: La opción ingresada por el usuario en 
+    mayúsculas si es válida, o muestra un mensaje de error.
+    '''
+
+    opciones = cargar_menu()
+    flag_validada = validar_str(opciones)
+
+    if flag_validada == True:
+        opciones = opciones.upper()
+    else:
+        print("Error. Ingrese un caracter acorde a las opciones.. ")
+
+    return opciones
+
+#VALIDAR OPCIONES NUMEROS
+def validar_entero(entero: str):
+    """ Verifica que el str ingresado sea un valor numérico, 
+    devolviendo así un bool que indique con 
+    'True' si se pudo llevar a cabo la validación."""
+    flag = False
+
+    if entero.isdigit():
+        flag = True
+
+    return flag
+
+def validar_opciones():
+    """Verifica que el str ingresado sea de caracter 
+    numérico dando paso a la instancia de opciones las 
+    cuales ejecutaran sus respectivas funciones"""
+
+    opciones = cargar_menu()
+    flag_validada = validar_entero(opciones)
+
+    if flag_validada == True:
+        opciones = int(opciones)
+    else:
+        print("Error. Ingrese un número acorde a las opciones.. ")
+
+    return opciones
+
+#MENU FUNCIONES OPCIONES
+while True:
+    opciones = validar_opciones()
+
+    match opciones:
+        case '':
+            pass
+        case '':
+            pass
+        case '':
+            pass
+        case '':
+            break
