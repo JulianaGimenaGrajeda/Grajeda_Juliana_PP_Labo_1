@@ -1,0 +1,1 @@
+#Había ponido mis funciones genéricas aquí :(
