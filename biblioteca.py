@@ -169,27 +169,20 @@ servicios del tipo seleccionado.
 descripción de manera ascendente.
 6) Guardar servicios: Se deberá guardar el listado del punto anterior en un archivo de tipo json.'''
 
+def myfunc(clave_1:str,clave_2:str):
+  return lambda clave_1,clave_2 : clave_1 * clave_2
 
+def asignar_totales(lista:list,clave_1:str, clave_2:str):
 
-# def asignar_totales(lista:list,clave_1:str, clave_2:str):
+    for i in range(len(lista)):
+        primer_valor= float(lista[i].get(clave_1))
+        segundo_valor= float(lista[i].get(clave_2))
 
-#     for i in range(len(lista)):
-#         primer_valor= lista[i].get(clave_1)
-#         segundo_valor= lista[i].get(clave_2)
-#         valor_asginar = lambda cantidad, preciounitario: cantidad * preciounitario\
-#         (primer_valor,segundo_valor)
+        valor_asginar = (myfunc(primer_valor,segundo_valor)(primer_valor,segundo_valor))
 
-#         lista[i].update({"totalServicio":valor_asginar})
+        lista[i].update({"totalServicio": f"{valor_asginar}"})
 
-#     return lista
-
-# lista = asignar_totales(lista,"cantidad","precioUnitario")
-# print(listar_datos(listar_datos,["id_servicio",
-#     "descripcion",
-#     "tipo",
-#     "precioUnitario",
-#     "cantidad",
-# "totalServicio"]))
+    return lista
 
 def guardar_archivo(nombre_extension:str,contenido:str):
     '''

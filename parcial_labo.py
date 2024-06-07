@@ -14,7 +14,13 @@ while True:
                 "cantidad",
             "totalServicio"]))
         case 3:
-            pass
+            lista = asignar_totales(lista,"cantidad","precioUnitario")
+            print(listar_datos(lista,["id_servicio",
+                "descripcion",
+                "tipo",
+                "precioUnitario",
+                "cantidad",
+            "totalServicio"]))
         case 4:
             lista_coincidentes = hallar_coincidentes(lista,"tipo","2")
             guardar_archivo("./Nuevo_archivo.json",str(lista_coincidentes))
