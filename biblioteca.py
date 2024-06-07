@@ -171,7 +171,7 @@ descripción de manera ascendente.
 
 
 
-#def asignar_totales(lista:list,clave_1:str, clave_2:str):
+# def asignar_totales(lista:list,clave_1:str, clave_2:str):
 
 #     for i in range(len(lista)):
 #         primer_valor= lista[i].get(clave_1)

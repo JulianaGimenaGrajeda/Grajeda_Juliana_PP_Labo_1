@@ -27,7 +27,7 @@ while True:
                 "cantidad",
             "totalServicio"]))
         case 6:
-            # lista = ordenar_valores(lista,"descripcion")
-            guardar_archivo("Lista_ordenada.json",str(lista_ordenada))
+            lista = ordenar_valores(lista,"descripcion")
+            guardar_archivo("Lista_ordenada.json",str(lista))
         case 7:
             break
