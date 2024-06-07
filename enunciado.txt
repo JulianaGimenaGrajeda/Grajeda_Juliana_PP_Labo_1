@@ -1,0 +1,13 @@
+1) Cargar archivo: Se pedirá el nombre del archivo y se cargarán en una lista los elementos
+del mismo.
+2) Imprimir lista: Se imprimirá por pantalla la tabla (en forma de columnas) con los datos de los 
+servicios.
+3) Asignar totales: Se deberá hacer uso de una función lambda que asignará a cada servicio el
+total calculado (totalServicio) de la siguiente forma: cantidad x precioUnitario.
+4) Filtrar por tipo: Se deberá generar un archivo igual al original, pero donde solo aparezcan
+servicios del tipo seleccionado.
+5) Mostrar servicios: Se deberá mostrar por pantalla un listado de los servicios ordenados por
+descripción de manera ascendente.
+6) Guardar servicios: Se deberá guardar el listado del punto anterior en un archivo de tipo json.
+7) Salir.
+Requerimientos del desarrollo. 
